@@ -12,43 +12,99 @@ app.get("/", (req, res) => {
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>My Node Page</title>
 
+      <!-- Google Font -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
       <style>
-        body {
+        * {
           margin: 0;
           padding: 0;
-          background: url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA2L3JldHJvem9uZS1iZy0wMy14LmpwZw.jpg') 
-                      no-repeat center center fixed;
-          background-size: cover;
-          font-family: Arial, sans-serif;
-          color: white;
-          text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+          box-sizing: border-box;
+          font-family: "Poppins", sans-serif;
+        }
+
+        body {
+          height: 100vh;
           display: flex;
           justify-content: center;
           align-items: center;
-          height: 100vh;
+          background: linear-gradient(
+              rgba(0, 0, 0, 0.3),
+              rgba(0, 0, 0, 0.3)
+            ),
+            url('https://wallpapers.com/images/hd/purple-white-wavy-checkered-pattern-w3idoav6gjuexsi3.jpg')
+            no-repeat center center fixed;
+          background-size: cover;
+          color: white;
+          animation: fadeIn 1.5s ease-in-out;
         }
 
-        .box {
-          background: rgba(0,0,0,0.5);
-          padding: 40px;
-          border-radius: 10px;
+        @keyframes fadeIn {
+          from {opacity: 0;}
+          to {opacity: 1;}
+        }
+
+        .card {
+          background: rgba(255, 255, 255, 0.12);
+          backdrop-filter: blur(10px);
+          padding: 40px 50px;
+          border-radius: 20px;
           text-align: center;
+          box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+          width: 420px;
+          animation: popIn 0.8s ease;
         }
 
-        h1 { margin-bottom: 10px; }
-        blockquote {
-          font-style: italic;
-          margin-top: 20px;
+        @keyframes popIn {
+          0% { transform: scale(0.8); opacity: 0; }
+          100% { transform: scale(1); opacity: 1; }
         }
+
+        h1 {
+          font-weight: 600;
+          font-size: 28px;
+          margin-bottom: 15px;
+        }
+
+        p {
+          font-size: 18px;
+          margin: 8px 0;
+        }
+
+        .quote {
+          margin-top: 20px;
+          font-size: 16px;
+          font-style: italic;
+          position: relative;
+          padding-left: 15px;
+        }
+
+        .quote::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 4px;
+          height: 100%;
+          background: #ffd369;
+          border-radius: 5px;
+        }
+
       </style>
     </head>
 
     <body>
-      <div class="box">
-        <h1>Welcome to my Node.js Page!</h1>
+      <div class="card">
+        <h1>Hello, I’m Sophia! 🌼</h1>
+
         <p><strong>Name:</strong> Sophia PPP</p>
         <p><strong>Section:</strong> BSIT 5</p>
-        <blockquote>"Anyone who has never made a mistake has never tried anything new."</blockquote>
+
+        <p class="quote">
+          “Anyone who has never made a mistake has never tried anything new.”
+        </p>
       </div>
     </body>
     </html>
