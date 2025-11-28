@@ -14,7 +14,6 @@ app.get("/", (req, res) => {
 
       <!-- Google Font -->
       <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
       <style>
@@ -38,12 +37,6 @@ app.get("/", (req, res) => {
             no-repeat center center fixed;
           background-size: cover;
           color: white;
-          animation: fadeIn 1.5s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-          from {opacity: 0;}
-          to {opacity: 1;}
         }
 
         .card {
@@ -54,12 +47,6 @@ app.get("/", (req, res) => {
           text-align: center;
           box-shadow: 0 10px 25px rgba(0,0,0,0.3);
           width: 420px;
-          animation: popIn 0.8s ease;
-        }
-
-        @keyframes popIn {
-          0% { transform: scale(0.8); opacity: 0; }
-          100% { transform: scale(1); opacity: 1; }
         }
 
         h1 {
@@ -99,8 +86,8 @@ app.get("/", (req, res) => {
       <div class="card">
         <h1>Hello, I’m Sophia! 🌼</h1>
 
-        <p><strong>Name:</strong> Sophia PPP</p>
-        <p><strong>Section:</strong> BSIT 5</p>
+        <p><strong>Name:</strong> Sophia Lorin S. Huelgas</p>
+        <p><strong>Section:</strong> BSIT-BA-4101</p>
 
         <p class="quote">
           “Anyone who has never made a mistake has never tried anything new.”
